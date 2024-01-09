@@ -1,18 +1,15 @@
-let num=12
-
-let n=1
-
-while(n*(n+1)<=num)
+function pronic(num)
 {
-    if (n*(n+1)==num)
+    let n=1
+    while(n*(n+1)<=num)
     {
-        console.log('pronic number')
-        break
+        if (n*(n+1)==num)
+        {
+            return true
+            break
+        }
+        n+=1
     }
-    n++
+    return False
 }
-
-if(n*(n+1)!=num)
-{
-    console.log('not a pronic number')
-}
+console.log(pronic(12))

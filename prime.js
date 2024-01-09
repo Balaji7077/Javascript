@@ -1,15 +1,14 @@
-let num=13
-let count=0
-for(let fa=1;fa<=num;fa+=1)
+function isPrime(num)
 {
-    if(num%fa==0)
-    {
-        count+=1
+    let count = 0;
+    for (let fa = 1; fa <= num; fa++)
+     {
+        if (num % fa == 0)
+        {
+            count += 1;
+        }
     }
+    return count == 2;
 }
-    if (count==2){
-        console.log("prime")}
-    else {
-        console.log('not prime')
-    }
 
+console.log(isPrime(12));

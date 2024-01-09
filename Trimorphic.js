@@ -1,9 +1,6 @@
-let num=6
-let str=num.toString()
-let p=str.length
-let cube=num**3
-let q=10**p
+function isTriomorphic(num) {
+    return num === (Math.pow(num, 3) % Math.pow(10, num.toString().length));
+}
 
-if(num==cube%q) console.log('Trimorphic number')
-else console.log('Not Trimorphic number')
-
+const result = isTriomorphic(4);
+console.log(result); // Output: true

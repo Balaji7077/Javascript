@@ -1,16 +1,15 @@
-let num= 123
-let sum=0
-let product=1
-let rem=0
-while (num!=0)
+function spy(num)
 {
-    rem=num%10
-    sum+=rem
-    product*=rem
-    num=Math.trunc(num/10) 
+    let product = 1
+    let res = 0
+    let rem = 0
+    while (num!=0)
+    {
+        rem = num % 10
+        res += rem
+        product *= rem
+        num = Math.trunc(num / 10)
+    }
+    return (res == product)
 }
-if (sum===product)
-{
-    console.log("spy number")
-}
-else console.log("not a spy number")
+console.log(spy(123))

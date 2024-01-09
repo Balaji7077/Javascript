@@ -1,20 +1,17 @@
-let num=12
-
-if (num>1)
+function isPrime(num) 
 {
-    let count=0
-    for (let fa=2;fa<=Math.trunc(num/2);fa++){
-        
-        if (num%fa===0){
-            console.log('not prime');
-            break
+    if (num <= 1)
+    {
+        return "not prime";
+    }
+    for (let fa = 2; fa <= Math.sqrt(num); fa++) 
+    {
+        if (num % fa === 0) 
+        {
+            return "not prime";
         }
-        count+=1
     }
-    if (Math.trunc(num/2)-1===count){
-        console.log('prime');
-    }
+    return "prime";
 }
-else{
-    console.log('not prime');
-}
+
+console.log(isPrime(12));
