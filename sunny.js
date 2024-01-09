@@ -1,21 +1,15 @@
-let num=9
-
-let n=1
-
-while(n**2<=num+1)
+function sunny(num)
 {
-    if (n**2==num+1)
+    let n=1
+    while(n**2<=num+1)
     {
-        console.log('sunny number')
-        break
+        if (n**2==num+1)
+        {
+            return true
+            break
+        }
+        n+=1
     }
-    n++
+    return(n**2!=num+1)
 }
-
-if(n**2!=num+1)
-{
-    console.log('not a sunny number')
-}
-
-
-
+console.log(sunny(20))

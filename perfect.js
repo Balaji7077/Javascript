@@ -1,11 +1,13 @@
-let num=6
-let add=0
-
-for (let fa=1;fa<num;fa++)
+function perfect(num)
 {
-    if (num%fa==0) add+=fa
-}
-
-if (add==num) console.log('Perfect Number')
-else console.log('Not a perfect Number')
-
+    let add=0
+    for (let fa=1;fa<num;fa+=1)
+    {
+        if (num%fa==0)
+        {
+            add+=fa
+        }
+    }
+    return add==num
+}   
+console.log(perfect(6))
